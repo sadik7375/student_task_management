@@ -1,0 +1,147 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f0f0f0;
+      height: 60px;
+      padding: 10px;
+    }
+
+    .navbar-logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0078d4;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .navbar-search input {
+      border: none;
+      outline: none;
+      width: 80%;
+      padding: 5px;
+    }
+
+    .navbar-search button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 20%;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .card-label {
+      font-size: 18px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      margin: 20px;
+    }
+
+    .template-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .template-thumbnail {
+      width: 280px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .template-title {
+      font-size: 16px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar-search {
+        display: none;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-logo">Study Matarial</div>
+    <div class="navbar-search">
+      <input type="text" placeholder="Search...">
+      <button><img src="search-icon.png" alt="Search"></button>
+    </div>
+  </div>
+  <div class="container">
+   
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f0f0f0;
+      height: 60px;
+      padding: 10px;
+    }
+
+    .navbar-logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0078d4;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .navbar-search input {
+      border: none;
+      outline: none;
+      width: 80%;
+      padding: 5px;
+    }
+
+    .navbar-search button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 20%;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .card-label {
+      font-size: 18px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      margin: 20px;
+    }
+
+    .template-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .template-thumbnail {
+      width: 280px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .template-title {
+      font-size: 16px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar-search {
+        display: none;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-logo">Study Matarial</div>
+    <div class="navbar-search">
+      <input type="text" placeholder="Search...">
+      <button><img src="search-icon.png" alt="Search"></button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <img src="word-icon.png" alt="Word" class="card-icon">
+      <div class="card-label">Document</div>
+    </div>
+    <div class="card">
+      <img src="powerpoint-icon.png" alt="PowerPoint" class="card-icon">
+      <div class="card-label">Presentation</div>
+    </div>
+    <div class="card">
+      <img src="excel-icon.png" alt="Excel" class="card-icon">
+      <div class="card-label">Workbook</div>
+    </div>
+    <div class="card">
+      <img src="forms-icon.png" alt="Forms" class="card-icon">
+      <div class="card-label">Form</div>
+    </div>
+    <div class="card">
+      <img src="forms-icon.png" alt="Forms" class="card-icon">
+      <div class="card-label">Quiz</div>
+    </div>
+    <div class="card">
+      <img src="onenote-icon.png" alt="OneNote" class="card-icon">
+      <div class="card-label">Notebook</div>
+    </div>
+    <div class="card">
+      <img src="list-icon.png" alt="List" class="card-icon">
+      <div class="card-label">List</div>
+    </div>
+    <div class="card">
+      <img src="onenote-icon.png" alt="OneNote" class="card-icon">
+      <div class="card-label">Page</div>
+    </div>
+    <div class="card">
+      <img src="visio-icon.png" alt="Visio" class="card-icon">
+      <div class="card-label">Drawing</div>
+    </div>
+    <div class="card">
+      <img src="stream-icon.png" alt="Stream" class="card-icon">
+      <div class="card-label">Camera recording</div>
+    </div>
+    <div class="card">
+      <img src="stream-icon.png" alt="Stream" class="card-icon">
+      <div class="card-label">Screen recording</div>
+    </div>
+  </div>
+  <div class="section-title">Start with a template</div>
+  <div class="container">
+    <div class="template-card">
+      <img src="color-blocks-certificate.png" alt="Color blocks certificate" class="template-thumbnail">
+      <div class="template-title">Color blocks student certificate of excellence</div>
+    </div>
+    <div class="template-card">
+      <img src="school-award-certificate.png" alt="School award certificate" class="template-thumbnail">
+      <div class="template-title">Elementary school award certificate</div>
+    </div>
+    <div class="template-card">
+      <img src="chalkboard-education-presentation.png" alt="Chalkboard education presentation" class="template-thumbnail">
+      <div class="template-title">Chalkboard education presentation (widescreen)</div>
+    </div>
+    <div class="template-card">
+      <img src="blue-bookstack-presentation.png" alt="Blue bookstack presentation" class="template-thumbnail">
+      <div class="template-title">Blue bookstack presentation (widescreen)</div>
+    </div>
+  </div>
+</body>
+</html>

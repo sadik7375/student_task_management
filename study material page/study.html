@@ -1,0 +1,278 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* The existing code for the navbar, the container, the sidebar, and the toggle button */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f0f0f0;
+      height: 60px;
+      padding: 10px;
+    }
+
+    .navbar-logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0078d4;
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .navbar-search input {
+      border: none;
+      outline: none;
+      width: 80%;
+      padding: 5px;
+    }
+
+    .navbar-search button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 20%;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-search button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .card-label {
+      font-size: 18px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      margin: 20px;
+    }
+
+    .template-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .template-thumbnail {
+      width: 280px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .template-title {
+      font-size: 16px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 10px;
+    }
+
+    .sidebar {
+      display: none; /* Hide the sidebar by default */
+      position: fixed; /* Fixed sidebar (stay in place on scroll) */
+      left: 0; /* Left position */
+      top: 0; /* Top position */
+      z-index: 1; /* Stay on top */
+      background-color: #f1f1f1; /* Light grey background */
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* Smooth transition effect */
+    }
+
+    .sidebar a {
+      display: block; /* Display links as blocks */
+      padding: 16px; /* Add some padding */
+      text-decoration: none; /* Remove underline */
+      font-size: 18px; /* Increase font size */
+      color: #333333; /* Dark grey color */
+    }
+
+    .sidebar a:hover {
+      background-color: #555; /* Add a hover effect */
+      color: white; /* Change color to white */
+    }
+
+    .sidebar .close-btn {
+      position: absolute; /* Position the close button */
+      top: 0; /* Top position */
+      right: 25px; /* Right position */
+      font-size: 36px; /* Increase font size */
+      margin-left: 50px; /* Add some left margin */
+    }
+
+    .toggle-btn {
+      display: none; /* Hide the button by default */
+      position: fixed; /* Fixed position */
+      left: 15px; /* Left position */
+      top: 15px; /* Top position */
+      z-index: 2; /* Stay on top */
+      background-color: #0078d4; /* Blue background */
+      color: white; /* White text */
+      border: none; /* Remove border */
+      outline: none; /* Remove outline */
+      padding: 10px 15px; /* Add some padding */
+      font-size: 18px; /* Increase font size */
+      cursor: pointer; /* Add a mouse pointer on hover */
+    }
+
+    /* Use a media query to show the sidebar and the toggle button when the screen is less than or equal to 768px */
+    @media (max-width: 768px) {
+      .sidebar {display: block; width: 0; /* Set the width to 0 */}
+      .toggle-btn {display: block;} /* Show the button */
+      .container {margin-left: 0;} /* Adjust the margin of the container */
+    }
+
+    /* The new code for the upload file option, the selection box, and the table */
+    .upload-file {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .upload-file input {
+      display: none; /* Hide the default input */
+    }
+
+    .upload-file label {
+      display: inline-block; /* Display the label as a block */
+      padding: 10px 20px; /* Add some padding */
+      background-color: #0078d4; /* Blue background */
+      color: white; /* White text */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Add a mouse pointer on hover */
+    }
+
+    .upload-file label:hover {
+      background-color: #005a9e; /* Darker blue on hover */
+    }
+
+    .upload-file span {
+      margin-left: 10px; /* Add some left margin */
+      font-size: 16px; /* Increase font size */
+    }
+
+    .selection-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .selection-box select {
+      display: inline-block; /* Display the select as a block */
+      padding: 10px 20px; /* Add some padding */
+      border: 1px solid #cccccc; /* Grey border */
+      border-radius: 5px; /* Rounded corners */
+      font-size: 16px; /* Increase font size */
+      cursor: pointer; /* Add a mouse pointer on hover */
+    }
+
+    .selection-box span {
+      margin-left: 10px; /* Add some left margin */
+      font-size: 16px; /* Increase font size */
+    }
+
+    .table {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .table table {
+      border-collapse: collapse; /* Collapse borders */
+      width: 80%; /* Set a width */
+    }
+
+    .table th, td {
+      border: 1px solid #cccccc; /* Grey border */
+      padding: 10px; /* Add some padding */
+      text-align: left; /* Align text to the left */
+    }
+
+    .table th {
+      background-color: #f0f0f0; /* Light grey background */
+      font-weight: bold; /* Bold text */
+    }
+
+    .table tr:nth-child(even) {
+      background-color: #f2f2f2; /* Lighter grey background for even rows */
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-logo">Microsoft 365</div>
+    <div class="navbar-search">
+      <input type="text" placeholder="Search...">
+      <button><img src="search-icon.png" alt="Search"></button>
+    </div>
+  </div>
+  <!-- The existing code for the sidebar and the toggle button -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+  </div>
+  <button id="myToggleBtn" class="toggle-btn" onclick="openNav()">☰</button>
+  <div class="container">
+    <div class="card">
+      <img src="word-icon.png" alt="Word" class="
