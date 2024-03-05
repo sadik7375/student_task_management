@@ -72,6 +72,7 @@
       height: 200px;
       margin: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
 
     .card-icon {
@@ -130,60 +131,69 @@
         flex-direction: column;
       }
     }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
   </style>
 </head>
 <body>
+
+
   <div class="navbar">
     <div class="navbar-logo">Study Matarial</div>
     <div class="navbar-search">
       <input type="text" placeholder="Search...">
-      <button><img src="search-icon.png" alt="Search"></button>
+      <!-- <button><img src="search-icon.png" alt="Search"></button> -->
     </div>
   </div>
+
+
   <div class="container">
     <div class="card">
-      <img src="images/documents.png" alt="Word" class="card-icon">
-      <div class="card-label">Document</div>
+      <img src="images/add.png" alt="Word" class="card-icon">
+      <div class="card-label">Add Section</div>
     </div>
-    <div class="card">
+     <a href="singlematarial.html"><div class="card">
       <img src="images/presentation.png" alt="PowerPoint" class="card-icon">
-      <div class="card-label">Presentation Slide</div>
+      <div class="card-label">Presentation Slide</div></a>
     </div> 
-    <div class="card">
-      <img src="images/modules.png" alt="Excel" class="card-icon">
-      <div class="card-label">Workbook</div>
+    <a href="singlematarial.html"><div class="card">
+      <img src="images/documents.png" alt="Excel" class="card-icon">
+      <div class="card-label">Document</div></a>
     </div>
     <div class="card">
       <img src="images/lecture.png" alt="Forms" class="card-icon">
-      <div class="card-label">Lecture</div>
+      <div class="card-label"><a href="singlematarial.html">Lecture</a></div>
     </div>
-    <div class="card">
+   <a href="singlematarial.html"> <div class="card">
       <img src="images/speech-bubble.png" alt="Forms" class="card-icon">
-      <div class="card-label">Quiz</div>
+      <div class="card-label">Quiz</div></a>
     </div>
     <div class="card">
       <img src="images/notebook.png" alt="OneNote" class="card-icon">
-      <div class="card-label">Notebook</div>
+      <div class="card-label"><a href="singlematarial.html">Notes</a></div>
     </div>
     <div class="card">
       <img src="images/assignment.png" alt="List" class="card-icon">
-      <div class="card-label">Assignmet</div>
+      <div class="card-label"><a href="singlematarial.html">Assignment</a></div>
     </div>
     <div class="card">
       <img src="images/seo-report.png" alt="OneNote" class="card-icon">
-      <div class="card-label">Report</div>
+      <div class="card-label"><a href="singlematarial.html">Report</a></div>
     </div>
     <div class="card">
       <img src="images/writing.png" alt="Visio" class="card-icon">
-      <div class="card-label">Hand Notes</div>
+      <div class="card-label"><a href="singlematarial.html">Hand Notes</a></div>
     </div>
     <div class="card">
       <img src="images/video-editing.png" alt="Stream" class="card-icon">
-      <div class="card-label">Recording</div>
+      <div class="card-label"><a href="singlematarial.html">Recording</a></div>
     </div>
  
   </div>
-  <div class="section-title">Start with a template</div>
+<!--   <div class="section-title">Start with a template</div>
   <div class="container">
     <div class="template-card">
       <img src="color-blocks-certificate.png" alt="Color blocks certificate" class="template-thumbnail">
@@ -198,6 +208,6 @@
       <div class="template-title">Chalkboard education presentation (widescreen)</div>
     </div>
    
-  </div>
+  </div> -->
 </body>
 </html>

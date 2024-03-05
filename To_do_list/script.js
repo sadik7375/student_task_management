@@ -7,10 +7,7 @@ let categories = [
     title: "Work",
     img: "briefcase.png",
   },
-  {
-    title: "Shopping",
-    img: "shopping.png",
-  },
+
   {
     title: "Coding",
     img: "web-design.png",
